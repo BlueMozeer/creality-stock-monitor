@@ -3,7 +3,7 @@ name: 创想云耗材库存监控
 on:
   # 定时执行：每30分钟检查一次
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: '0 * * * *'
   # 支持手动触发（用于测试）
   workflow_dispatch:
     inputs:
