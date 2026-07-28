@@ -6,6 +6,15 @@ on:
     - cron: '*/30 * * * *'
   # 支持手动触发（用于测试）
   workflow_dispatch:
+    inputs:
+      test_notify:
+        description: '测试通知推送（勾选后会发送一条模拟有货通知到微信）'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
 
 jobs:
   monitor:
@@ -25,6 +34,7 @@ jobs:
           CXY_UID: ${{ secrets.CXY_UID }}
           CXY_DUID: ${{ secrets.CXY_DUID }}
           SERVERCHAN_KEY: ${{ secrets.SERVERCHAN_KEY }}
+          TEST_NOTIFY: ${{ github.event.inputs.test_notify }}
         run: python monitor.py
 
       - name: Commit state file
