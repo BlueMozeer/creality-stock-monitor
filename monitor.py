@@ -27,7 +27,6 @@ SERVERCHAN_URL = "https://sctapi.ftqq.com/"
 # 监控目标商品ID
 TARGET_GOODS = {
     "6476f814ab8e06aa735af9e1": "CR-PLA_1.75_1KG_颜色随机",
-    "6476fa51ab8e06aa735afb1a": "CR-PLA彩虹色_1.75_1KG",
     "65f7a5ad42a8f2c3d45c3a39": "TPU耗材-1.0Kg-1.75mm-颜色随机",
 }
 
