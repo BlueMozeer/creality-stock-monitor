@@ -41,6 +41,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          export TZ=Asia/Shanghai
           if [ -f stock_state.json ]; then
             git add stock_state.json
             git diff --staged --quiet || git commit -m "更新库存状态 - $(date +%Y-%m-%d_%H:%M)"
